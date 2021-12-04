@@ -1,3 +1,76 @@
+<p align="center">
+    <h1>Windmill Dashboard Next.js Typescript</h1>
+    <a href="https://windmill-dashboard-nextjs-typescript.vercel.app/app">
+      <img alt="Windmill Dashboard React" width="600" src=".github/windmill-dashboard-thumbnail.jpg">
+    </a><br>
+    Four 100 scores and PWA ready. Just connect your data.
+</p>
+
+See the original project : [React Version by @estevanmaito](https://github.com/estevanmaito/windmill-dashboard-react/)
+With helping from other contributors :
+- [Next.JS Version by @Aldhanekaa](https://github.com/Aldhanekaa/windmill-dashboard-nextjs)
+- [Typescript by @neutralboy](https://github.com/neutralboy/windmill-dashboard-react-ts)
+
+🚀 [See it live](https://windmill-dashboard-nextjs-typescript.vercel.app/app)
+
+This is not a template. This is a complete application, built on top of React, with all tiny details taken care of so you just need to bring the data to feed it.
+
+Accessibility is a priority in my projects and I think it should be in yours too, so this was developed listening to real screen readers, focus traps and keyboard navigation are available everywhere.
+
+## 📦 Features
+
+- 🦮 Throughly accessible (developed using screen readers)
+- 🌗 Dark theme enabled (load even different images based on theme)
+- 🧩 Multiple (custom) components
+- ⚡ Code splitting
+- Tailwind CSS
+- [Windmill React UI](https://windmillui.com/react-ui)
+- Heroicons
+- Chart.js
+- PWA delivering offline-first and app-like experience
+
+## 📚 Docs
+
+### General components
+
+Windmill Dashboard React is built on top of [Windmill React UI](https://windmillui.com/react-ui). You will find the documentation for every small component there.
+
+### Routing
+
+Routes in Windmill Dashboard are separated into two categories, sidebar ([routes/sidebar.js](routes/sidebar.js)) and general ([pages](pages)).
+
+#### Sidebar routes
+
+These are the routes that will show in the sidebar. They expect three properties:
+
+- `path`: the destination;
+- `name`: the name to be shown;
+- `icon`: an icon to illustrate the item
+
+Item that are used as dropdowns, like the Pages option, don't need a `path`, but expect a `routes` array of objects with `path` and `name`:
+
+```js
+// sidebar.js
+{
+  path: '/app/tables',
+  icon: 'TablesIcon',
+  name: 'Tables',
+},
+{
+  icon: 'PagesIcon', // <-- this is used as a submenu, so no path
+  name: 'Pages',
+  routes: [
+    // submenu
+    {
+      path: '/login',
+      name: 'Login', // <-- these don't have icons
+    },
+    {
+      path: '/create-account',
+      name: 'Create account',
+    },
+```
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
