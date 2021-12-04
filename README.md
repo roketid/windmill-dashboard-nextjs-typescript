@@ -7,9 +7,10 @@
 
 See the [Original Project by @estevanmaito](https://github.com/estevanmaito/windmill-dashboard-react/)
 
-With helping from other contributors :
-- [Next.JS Version by @Aldhanekaa](https://github.com/Aldhanekaa/windmill-dashboard-nextjs)
+With help from other contributors :
+- [Nextjs Version by @Aldhanekaa](https://github.com/Aldhanekaa/windmill-dashboard-nextjs)
 - [Typescript by @neutralboy](https://github.com/neutralboy/windmill-dashboard-react-ts)
+
 
 🚀 [See it live](https://windmill-dashboard-nextjs-typescript.vercel.app/app)
 
@@ -36,7 +37,7 @@ Windmill Dashboard React is built on top of [Windmill React UI](https://windmill
 
 ### Routing
 
-Routes in Windmill Dashboard are separated into two categories, sidebar ([routes/sidebar.js](routes/sidebar.js)) and general ([pages](pages)).
+Routes in Windmill Dashboard are separated into two categories, sidebar ([routes/sidebar.tsx](routes/sidebar.tsx)) and general ([pages](pages)).
 
 #### Sidebar routes
 
