@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// import { GithubIcon, TwitterIcon } from '../icons';
 import { Label, Input, Button } from '@windmill/react-ui';
 import { GithubIcon, TwitterIcon } from 'icons';
 
@@ -52,7 +51,7 @@ export default function loginPage() {
                 />
               </Label>
 
-              <Link href='/'>
+              <Link href='/app' passHref={true}>
                 <Button className='mt-4' block>
                   Log in
                 </Button>
