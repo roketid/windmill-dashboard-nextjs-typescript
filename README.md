@@ -3,10 +3,10 @@
     <a href="https://windmill-dashboard-nextjs-typescript.vercel.app/app">
       <img alt="Windmill Dashboard React" width="600" src=".github/windmill-dashboard-thumbnail.jpg">
     </a><br>
-    Four 100 scores and PWA ready. Just connect your data.
 </p>
 
-See the original project : [React Version by @estevanmaito](https://github.com/estevanmaito/windmill-dashboard-react/)
+See the [Original Project by @estevanmaito](https://github.com/estevanmaito/windmill-dashboard-react/)
+
 With helping from other contributors :
 - [Next.JS Version by @Aldhanekaa](https://github.com/Aldhanekaa/windmill-dashboard-nextjs)
 - [Typescript by @neutralboy](https://github.com/neutralboy/windmill-dashboard-react-ts)
@@ -27,7 +27,6 @@ Accessibility is a priority in my projects and I think it should be in yours too
 - [Windmill React UI](https://windmillui.com/react-ui)
 - Heroicons
 - Chart.js
-- PWA delivering offline-first and app-like experience
 
 ## 📚 Docs
 
