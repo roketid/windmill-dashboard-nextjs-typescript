@@ -1,11 +1,14 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useContext } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
-import { Label, Input, Button } from '@windmill/react-ui';
-import { GithubIcon, TwitterIcon } from 'icons';
+import { Label, Input, Button, WindmillContext } from '@windmill/react-ui'
+import { GithubIcon, TwitterIcon } from 'icons'
 
-export default function loginPage() {
+function LoginPage() {
+  const { mode } = useContext(WindmillContext)
+  const imgSource = mode === 'dark' ? '/assets/img/login-office-dark.jpeg' : '/assets/img/login-office.jpeg'
+
   return (
     <div className='flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900'>
       <div className='flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800'>
@@ -13,15 +16,8 @@ export default function loginPage() {
           <div className='relative h-32 md:h-auto md:w-1/2'>
             <Image
               aria-hidden='true'
-              className='object-cover w-full h-full dark:hidden'
-              src='/assets/img/login-office.jpeg'
-              alt='Office'
-              layout='fill'
-            />
-            <Image
-              aria-hidden='true'
-              className='hidden object-cover w-full h-full dark:block'
-              src='/assets/img/login-office-dark.jpeg'
+              className='hidden object-cover w-full h-full'
+              src={imgSource}
               alt='Office'
               layout='fill'
             />
@@ -89,3 +85,5 @@ export default function loginPage() {
     </div>
   );
 }
+
+export default LoginPage

@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
-import Image from 'next/image';
+import Image from 'next/image'
 
-import ImageLight from 'public/assets/img/create-account-office.jpeg'
-import ImageDark from 'public/assets/img/create-account-office-dark.jpeg'
 import { GithubIcon, TwitterIcon } from 'icons'
-import { Input, Label, Button } from '@windmill/react-ui'
+import { Input, Label, Button, WindmillContext } from '@windmill/react-ui'
 
-function Login() {
+function CrateAccount() {
+  const { mode } = useContext(WindmillContext)
+  const imgSource = mode === 'dark' ? '/assets/img/create-account-office-dark.jpeg' : '/assets/img/create-account-office.jpeg'
+
   return (
     <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
       <div className="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
@@ -15,15 +16,8 @@ function Login() {
           <div className="relative h-32 md:h-auto md:w-1/2">
             <Image
               aria-hidden="true"
-              className="object-cover w-full h-full dark:hidden"
-              src={ImageLight}
-              alt="Office"
-              layout='fill'
-            />
-            <Image
-              aria-hidden="true"
-              className="hidden object-cover w-full h-full dark:block"
-              src={ImageDark}
+              className="object-cover w-full h-full"
+              src={imgSource}
               alt="Office"
               layout='fill'
             />
@@ -90,4 +84,4 @@ function Login() {
   )
 }
 
-export default Login
+export default CrateAccount
