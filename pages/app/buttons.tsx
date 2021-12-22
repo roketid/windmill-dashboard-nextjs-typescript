@@ -5,7 +5,6 @@ import SectionTitle from 'components/Typography/SectionTitle'
 import CTA from 'components/CTA'
 import { Button } from '@windmill/react-ui'
 import Layout from 'containers/Layout'
-// import Link from 'next/link'
 
 function Buttons() {
   return (

@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { DropdownIcon } from 'icons';
+import { DropdownIcon, IIcon } from 'icons';
 import * as Icons from 'icons';
 import { Transition } from '@windmill/react-ui';
 import { IRoute } from 'routes/sidebar';
-import { IIcon } from "icons";
 
 function Icon({ icon, ...props }: IIcon) {
   // @ts-ignore
-  const Icon = Icons[icon];
-  return <Icon {...props} />
+  const _Icon = Icons[icon];
+  return <_Icon {...props} />
 }
 
 interface ISidebarSubmenu{ route: IRoute };

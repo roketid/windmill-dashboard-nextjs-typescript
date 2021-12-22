@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useLayoutEffect, useMemo } from 'react'
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
 
 /**
  * Saves the old theme for future use
