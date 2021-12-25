@@ -17,9 +17,8 @@ import {
   Pagination,
 } from '@windmill/react-ui'
 import { EditIcon, TrashIcon } from 'icons'
-import { ITableData } from "utils/demo/tableData"
 
-import response from 'utils/demo/tableData'
+import response, { ITableData } from 'utils/demo/tableData'
 import Layout from 'containers/Layout'
 // make a copy of the data, for the second table
 const response2 = response.concat([])

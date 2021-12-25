@@ -1,4 +1,4 @@
-import { Children, useContext, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import SidebarContext, { SidebarProvider } from 'context/SidebarContext'
 import Sidebar from 'components/Sidebar'
