@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 
-import CTA from "components/CTA";
-import InfoCard from "components/Cards/InfoCard";
-import ChartCard from "components/Chart/ChartCard";
-import { Doughnut, Line } from "react-chartjs-2";
-import ChartLegend from "components/Chart/ChartLegend";
-import PageTitle from "components/Typography/PageTitle";
-import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from "icons";
-import RoundIcon from "components/RoundIcon";
-import Layout from "containers/Layout";
-import response, { ITableData } from "utils/demo/tableData";
+import CTA from 'components/CTA'
+import InfoCard from 'components/Cards/InfoCard'
+import ChartCard from 'components/Chart/ChartCard'
+import { Doughnut, Line } from 'react-chartjs-2'
+import ChartLegend from 'components/Chart/ChartLegend'
+import PageTitle from 'components/Typography/PageTitle'
+import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from 'icons'
+import RoundIcon from 'components/RoundIcon'
+import Layout from 'containers/Layout'
+import response, { ITableData } from 'utils/demo/tableData'
 
 import {
   TableBody,
@@ -22,14 +22,14 @@ import {
   Avatar,
   Badge,
   Pagination,
-} from "@windmill/react-ui";
+} from '@windmill/react-ui'
 
 import {
   doughnutOptions,
   lineOptions,
   doughnutLegends,
   lineLegends,
-} from "utils/demo/chartsData";
+} from 'utils/demo/chartsData'
 
 import {
   Chart,
@@ -41,7 +41,7 @@ import {
   Title,
   Tooltip,
   Legend,
-} from "chart.js";
+} from 'chart.js'
 
 function Dashboard() {
   Chart.register(
@@ -53,25 +53,25 @@ function Dashboard() {
     Title,
     Tooltip,
     Legend
-  );
+  )
 
-  const [page, setPage] = useState(1);
-  const [data, setData] = useState<ITableData[]>([]);
+  const [page, setPage] = useState(1)
+  const [data, setData] = useState<ITableData[]>([])
 
   // pagination setup
-  const resultsPerPage = 10;
-  const totalResults = response.length;
+  const resultsPerPage = 10
+  const totalResults = response.length
 
   // pagination change control
   function onPageChange(p: number) {
-    setPage(p);
+    setPage(p)
   }
 
   // on page change, load new sliced data
   // here you would make another server request for new data
   useEffect(() => {
-    setData(response.slice((page - 1) * resultsPerPage, page * resultsPerPage));
-  }, [page]);
+    setData(response.slice((page - 1) * resultsPerPage, page * resultsPerPage))
+  }, [page])
 
   return (
     <Layout>
@@ -188,7 +188,7 @@ function Dashboard() {
         </ChartCard>
       </div>
     </Layout>
-  );
+  )
 }
 
-export default Dashboard;
+export default Dashboard
