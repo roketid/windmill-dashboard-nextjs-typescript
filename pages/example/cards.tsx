@@ -1,13 +1,13 @@
 import React from 'react'
 
-import PageTitle from 'components/Typography/PageTitle'
-import SectionTitle from 'components/Typography/SectionTitle'
-import CTA from 'components/CTA'
-import InfoCard from 'components/Cards/InfoCard'
+import PageTitle from 'example/components/Typography/PageTitle'
+import SectionTitle from 'example/components/Typography/SectionTitle'
+import CTA from 'example/components/CTA'
+import InfoCard from 'example/components/Cards/InfoCard'
 import { Card, CardBody } from '@windmill/react-ui'
 import { CartIcon, ChatIcon, MoneyIcon, PeopleIcon } from 'icons'
-import RoundIcon from 'components/RoundIcon'
-import Layout from 'containers/Layout'
+import RoundIcon from 'example/components/RoundIcon'
+import Layout from 'example/containers/Layout'
 
 function Cards() {
   return (

@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import PageTitle from 'components/Typography/PageTitle'
-import CTA from 'components/CTA'
+import PageTitle from 'example/components/Typography/PageTitle'
+import CTA from 'example/components/CTA'
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@windmill/react-ui'
-import Layout from 'containers/Layout'
+import Layout from 'example/containers/Layout'
 
 function Modals() {
   const [isModalOpen, setIsModalOpen] = useState(false)

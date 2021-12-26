@@ -1,4 +1,4 @@
-import Layout from 'containers/Layout'
+import Layout from 'example/containers/Layout'
 import { ForbiddenIcon } from 'icons'
 
 function Page404() {

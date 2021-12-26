@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-import PageTitle from 'components/Typography/PageTitle'
-import SectionTitle from 'components/Typography/SectionTitle'
-import CTA from 'components/CTA'
+import PageTitle from 'example/components/Typography/PageTitle'
+import SectionTitle from 'example/components/Typography/SectionTitle'
+import CTA from 'example/components/CTA'
 import {
   Table,
   TableHeader,
@@ -19,7 +19,7 @@ import {
 import { EditIcon, TrashIcon } from 'icons'
 
 import response, { ITableData } from 'utils/demo/tableData'
-import Layout from 'containers/Layout'
+import Layout from 'example/containers/Layout'
 // make a copy of the data, for the second table
 const response2 = response.concat([])
 

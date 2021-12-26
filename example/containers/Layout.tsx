@@ -1,8 +1,8 @@
 import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import SidebarContext, { SidebarProvider } from 'context/SidebarContext'
-import Sidebar from 'components/Sidebar'
-import Header from 'components/Header'
+import Sidebar from 'example/components/Sidebar'
+import Header from 'example/components/Header'
 import Main from './Main'
 
 interface ILayout{

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
-import CTA from 'components/CTA'
-import InfoCard from 'components/Cards/InfoCard'
-import ChartCard from 'components/Chart/ChartCard'
+import CTA from 'example/components/CTA'
+import InfoCard from 'example/components/Cards/InfoCard'
+import ChartCard from 'example/components/Chart/ChartCard'
 import { Doughnut, Line } from 'react-chartjs-2'
-import ChartLegend from 'components/Chart/ChartLegend'
-import PageTitle from 'components/Typography/PageTitle'
+import ChartLegend from 'example/components/Chart/ChartLegend'
+import PageTitle from 'example/components/Typography/PageTitle'
 import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from 'icons'
-import RoundIcon from 'components/RoundIcon'
-import Layout from 'containers/Layout'
+import RoundIcon from 'example/components/RoundIcon'
+import Layout from 'example/containers/Layout'
 import response, { ITableData } from 'utils/demo/tableData'
 
 import {

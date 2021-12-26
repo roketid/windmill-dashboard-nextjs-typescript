@@ -1,8 +1,8 @@
-import ChartCard from 'components/Chart/ChartCard'
+import ChartCard from 'example/components/Chart/ChartCard'
 import { Doughnut, Line, Bar } from 'react-chartjs-2'
-import ChartLegend from 'components/Chart/ChartLegend'
-import PageTitle from 'components/Typography/PageTitle'
-import Layout from 'containers/Layout'
+import ChartLegend from 'example/components/Chart/ChartLegend'
+import PageTitle from 'example/components/Typography/PageTitle'
+import Layout from 'example/containers/Layout'
 import {
   doughnutOptions,
   lineOptions,

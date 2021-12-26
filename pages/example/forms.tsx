@@ -1,12 +1,12 @@
 import React from 'react'
 
-import CTA from 'components/CTA'
-import PageTitle from 'components/Typography/PageTitle'
-import SectionTitle from 'components/Typography/SectionTitle'
+import CTA from 'example/components/CTA'
+import PageTitle from 'example/components/Typography/PageTitle'
+import SectionTitle from 'example/components/Typography/SectionTitle'
 import { Input, HelperText, Label, Select, Textarea } from '@windmill/react-ui'
 
 import { MailIcon } from 'icons'
-import Layout from 'containers/Layout'
+import Layout from 'example/containers/Layout'
 
 function Forms() {
   return (
