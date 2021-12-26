@@ -1,5 +1,5 @@
-import ChartCard from 'example/components/Chart/ChartCard'
 import { Doughnut, Line, Bar } from 'react-chartjs-2'
+import ChartCard from 'example/components/Chart/ChartCard'
 import ChartLegend from 'example/components/Chart/ChartLegend'
 import PageTitle from 'example/components/Typography/PageTitle'
 import Layout from 'example/containers/Layout'

@@ -1,10 +1,10 @@
 import React from 'react'
-import { HeartIcon, EditIcon } from 'icons'
+import { Button } from '@windmill/react-ui'
 import PageTitle from 'example/components/Typography/PageTitle'
 import SectionTitle from 'example/components/Typography/SectionTitle'
 import CTA from 'example/components/CTA'
-import { Button } from '@windmill/react-ui'
 import Layout from 'example/containers/Layout'
+import { HeartIcon, EditIcon } from 'icons'
 
 function Buttons() {
   return (
