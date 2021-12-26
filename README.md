@@ -1,6 +1,6 @@
 <p align="center">
     <h1>Windmill Dashboard Next.js Typescript</h1>
-    <a href="https://windmill-dashboard-nextjs-typescript.vercel.app/app">
+    <a href="https://windmill-dashboard-nextjs-typescript.vercel.app/example">
       <img alt="Windmill Dashboard React" width="600" src=".github/windmill-dashboard-thumbnail.jpg">
     </a><br>
 </p>
@@ -12,7 +12,7 @@ With help from other contributors :
 - [Nextjs version by @Aldhanekaa](https://github.com/Aldhanekaa/windmill-dashboard-nextjs)
 
 
-🚀 [See it live](https://windmill-dashboard-nextjs-typescript.vercel.app/app)
+🚀 [See it live](https://windmill-dashboard-nextjs-typescript.vercel.app/example)
 
 This is not a template. This is a complete application, built on top of React, with all tiny details taken care of so you just need to bring the data to feed it.
 
@@ -37,9 +37,22 @@ Windmill Dashboard React is built on top of [Windmill React UI](https://windmill
 
 ### Routing
 
-Routes in Windmill Dashboard are separated into two categories, sidebar ([routes/sidebar.tsx](routes/sidebar.tsx)) and general ([pages](pages)).
+Change default redirecting when hit the `/` or `home` in file [next.config.js](next.config.js)
+```js
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/example/login',
+        permanent: false,
+      },
+    ]
+  }
+```
 
 #### Sidebar routes
+
+To configure sidebar menus, see file ([routes/sidebar.tsx](routes/sidebar.tsx)).
 
 These are the routes that will show in the sidebar. They expect three properties:
 
@@ -52,7 +65,7 @@ Item that are used as dropdowns, like the Pages option, don't need a `path`, but
 ```js
 // sidebar.js
 {
-  path: '/app/tables',
+  path: '/example/tables',
   icon: 'TablesIcon',
   name: 'Tables',
 },
@@ -62,11 +75,11 @@ Item that are used as dropdowns, like the Pages option, don't need a `path`, but
   routes: [
     // submenu
     {
-      path: '/login',
+      path: '/example/login',
       name: 'Login', // <-- these don't have icons
     },
     {
-      path: '/create-account',
+      path: '/example/create-account',
       name: 'Create account',
     },
 ```
