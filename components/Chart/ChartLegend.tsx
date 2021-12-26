@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {ILegends} from "utils/demo/chartsData"
+import {ILegends} from 'utils/demo/chartsData'
 
 interface IChartLegend{
   legends: ILegends[]
