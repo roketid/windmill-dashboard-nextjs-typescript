@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { DropdownIcon, IIcon } from 'icons';
 import * as Icons from 'icons';
 import { Transition } from '@windmill/react-ui';
@@ -14,7 +15,15 @@ function Icon({ icon, ...props }: IIcon) {
 interface ISidebarSubmenu{ route: IRoute };
 
 function SidebarSubmenu({ route }: ISidebarSubmenu) {
-  const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false)
+  const { asPath } = useRouter();
+
+  const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(
+    route.routes
+    ? route.routes.filter((r) => {
+        return r?.path == asPath
+      }).length > 0
+    : false
+  )
 
   function handleDropdownMenuClick() {
     setIsDropdownMenuOpen(!isDropdownMenuOpen)
@@ -22,12 +31,23 @@ function SidebarSubmenu({ route }: ISidebarSubmenu) {
 
   return (
     <li className="relative px-6 py-3" key={route.name}>
+      {isDropdownMenuOpen && (
+        <span
+          className='absolute h-12 inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg'
+          aria-hidden='true'
+        ></span>
+      )}
       <button
-        className="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+        className={`inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 ${
+          isDropdownMenuOpen
+            ? 'dark:text-gray-100 text-gray-800'
+            : ''
+        }`}
         onClick={handleDropdownMenuClick}
         aria-haspopup="true"
       >
         <span className="inline-flex items-center">
+          
           <Icon className="w-5 h-5" aria-hidden="true" icon={route.icon || ""} />
           <span className="ml-4">{route.name}</span>
         </span>
@@ -53,7 +73,15 @@ function SidebarSubmenu({ route }: ISidebarSubmenu) {
                 key={r.name}
               >
                 <Link href={r.path || ""}>
-                  <a className="w-full">{r.name}</a>
+                  <a
+                    className={`w-full inline-block ${
+                      asPath == r.path
+                      ? 'dark:text-gray-100 text-gray-800'
+                      : ''
+                    }`}
+                  >
+                    {r.name}
+                  </a>
                 </Link>
               </li>
             ))
