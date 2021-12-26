@@ -13,37 +13,37 @@ interface IRoute{
 
 const routes: IRoute[] = [
   {
-    path: '/app', // the url
+    path: '/example', // the url
     icon: 'HomeIcon', // the component being exported from icons/index.js
     name: 'Dashboard', // name that appear in Sidebar
   },
   {
-    path: '/app/forms',
+    path: '/example/forms',
     icon: 'FormsIcon',
     name: 'Forms',
   },
   {
-    path: '/app/cards',
+    path: '/example/cards',
     icon: 'CardsIcon',
     name: 'Cards',
   },
   {
-    path: '/app/charts',
+    path: '/example/charts',
     icon: 'ChartsIcon',
     name: 'Charts',
   },
   {
-    path: '/app/buttons',
+    path: '/example/buttons',
     icon: 'ButtonsIcon',
     name: 'Buttons',
   },
   {
-    path: '/app/modals',
+    path: '/example/modals',
     icon: 'ModalsIcon',
     name: 'Modals',
   },
   {
-    path: '/app/tables',
+    path: '/example/tables',
     icon: 'TablesIcon',
     name: 'Tables',
   },
@@ -53,23 +53,23 @@ const routes: IRoute[] = [
     routes: [
       // submenu
       {
-        path: '/login',
+        path: '/example/login',
         name: 'Login',
       },
       {
-        path: '/create-account',
+        path: '/example/create-account',
         name: 'Create account',
       },
       {
-        path: '/forgot-password',
+        path: '/example/forgot-password',
         name: 'Forgot password',
       },
       {
-        path: '/app/404',
+        path: '/example/404',
         name: '404',
       },
       {
-        path: '/app/blank',
+        path: '/example/blank',
         name: 'Blank',
       },
     ],
