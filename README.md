@@ -35,6 +35,10 @@ Accessibility is a priority in my projects and I think it should be in yours too
 
 Windmill Dashboard React is built on top of [Windmill React UI](https://windmillui.com/react-ui). You will find the documentation for every small component there.
 
+### Example Boilerplate
+
+All components and containers are saved in folder [example](example)
+
 ### Routing
 
 Change default redirecting when hit the `/` or `home` in file [next.config.js](next.config.js)
