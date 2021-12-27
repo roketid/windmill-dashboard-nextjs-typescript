@@ -1,5 +1,4 @@
-import { useContext, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useContext } from 'react'
 import SidebarContext, { SidebarProvider } from 'context/SidebarContext'
 import Sidebar from 'example/components/Sidebar'
 import Header from 'example/components/Header'
@@ -10,19 +9,11 @@ interface ILayout{
 }
 
 function Layout({ children }: ILayout) {
-  const CSidebarContext = useContext(SidebarContext)
-
-  const router = useRouter()
-
-  useEffect(() => {
-    if (CSidebarContext.isSidebarOpen) {
-      CSidebarContext.closeSidebar()
-    }
-  }, [CSidebarContext, router.asPath])
+  const { isSidebarOpen } = useContext(SidebarContext)
 
   return <SidebarProvider>
     <div
-      className={`flex h-screen bg-gray-50 dark:bg-gray-900 ${CSidebarContext.isSidebarOpen && 'overflow-hidden'}`}
+      className={`flex h-screen bg-gray-50 dark:bg-gray-900 ${isSidebarOpen && 'overflow-hidden'}`}
       >
       <Sidebar />
       <div className="flex flex-col flex-1 w-full">

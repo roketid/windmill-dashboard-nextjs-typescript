@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { DropdownIcon, IIcon } from 'icons';
-import * as Icons from 'icons';
-import { Transition } from '@windmill/react-ui';
-import { IRoute } from 'routes/sidebar';
+import React, { useState, useContext } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { DropdownIcon, IIcon } from 'icons'
+import * as Icons from 'icons'
+import { Transition } from '@windmill/react-ui'
+import { IRoute } from 'routes/sidebar'
+import SidebarContext from 'context/SidebarContext'
 
 function Icon({ icon, ...props }: IIcon) {
   // @ts-ignore
-  const _Icon = Icons[icon];
+  const _Icon = Icons[icon]
   return <_Icon {...props} />
 }
 
-interface ISidebarSubmenu{ route: IRoute };
+interface ISidebarSubmenu {
+  route: IRoute
+  linkClicked: () => void
+}
 
-function SidebarSubmenu({ route }: ISidebarSubmenu) {
-  const { asPath } = useRouter();
+function SidebarSubmenu({ route, linkClicked }: ISidebarSubmenu) {
+  const { asPath } = useRouter()
+  const { saveScroll } = useContext(SidebarContext)
 
   const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(
     route.routes
@@ -72,13 +77,17 @@ function SidebarSubmenu({ route }: ISidebarSubmenu) {
                 className="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 key={r.name}
               >
-                <Link href={r.path || ""}>
+                <Link
+                  href={r.path || ""}
+                  scroll={false}
+                >
                   <a
                     className={`w-full inline-block ${
                       asPath == r.path
                       ? 'dark:text-gray-100 text-gray-800'
                       : ''
                     }`}
+                    onClick={linkClicked}
                   >
                     {r.name}
                   </a>

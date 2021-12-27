@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
 import routes from 'routes/sidebar'
 import * as Icons from 'icons'
@@ -6,6 +6,7 @@ import { IIcon } from 'icons'
 import SidebarSubmenu from './SidebarSubmenu'
 import { Button } from '@windmill/react-ui'
 import { useRouter } from 'next/router'
+import SidebarContext from 'context/SidebarContext';
 
 
 function Icon({ icon, ...props }: IIcon){
@@ -14,8 +15,13 @@ function Icon({ icon, ...props }: IIcon){
   return <Icon {...props} />
 }
 
-function SidebarContent() {
+interface ISidebarContent{
+  linkClicked: () => void
+}
+
+function SidebarContent({ linkClicked }: ISidebarContent) {
   const { asPath } = useRouter();
+  const { saveScroll } = useContext(SidebarContext)
 
   return (
     <div className="py-4 text-gray-500 dark:text-gray-400">
@@ -29,16 +35,20 @@ function SidebarContent() {
       <ul className="mt-6">
         {routes.map((route) =>
           route.routes ? (
-            <SidebarSubmenu route={route} key={route.name} />
+            <SidebarSubmenu route={route} key={route.name} linkClicked={linkClicked} />
           ) : (
             <li className='relative px-6 py-3' key={route.name}>
-              <Link href={route.path || '#'}>
+              <Link
+                href={route.path || '#'}
+                scroll={false}
+              >
                 <a
                   className={`inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 ${
                     asPath == route.path
                       ? 'dark:text-gray-100 text-gray-800'
                       : ''
                   }`}
+                  onClick={linkClicked}
                 >
                   {asPath == route.path && (
                     <span
