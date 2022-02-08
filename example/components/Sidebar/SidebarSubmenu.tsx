@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { DropdownIcon, IIcon } from 'icons'
 import * as Icons from 'icons'
 import { Transition } from '@windmill/react-ui'
-import { IRoute } from 'routes/sidebar'
+import { IRoute, routeIsActive } from 'routes/sidebar'
 import SidebarContext from 'context/SidebarContext'
 
 function Icon({ icon, ...props }: IIcon) {
@@ -19,13 +19,13 @@ interface ISidebarSubmenu {
 }
 
 function SidebarSubmenu({ route, linkClicked }: ISidebarSubmenu) {
-  const { asPath } = useRouter()
+  const { pathname } = useRouter()
   const { saveScroll } = useContext(SidebarContext)
 
   const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(
     route.routes
     ? route.routes.filter((r) => {
-        return r?.path == asPath
+        return routeIsActive(pathname, r)
       }).length > 0
     : false
   )
@@ -83,7 +83,7 @@ function SidebarSubmenu({ route, linkClicked }: ISidebarSubmenu) {
                 >
                   <a
                     className={`w-full inline-block ${
-                      asPath == r.path
+                      routeIsActive(pathname, r)
                       ? 'dark:text-gray-100 text-gray-800'
                       : ''
                     }`}
