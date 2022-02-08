@@ -56,7 +56,7 @@ function SidebarSubmenu({ route, linkClicked }: ISidebarSubmenu) {
           <Icon className="w-5 h-5" aria-hidden="true" icon={route.icon || ""} />
           <span className="ml-4">{route.name}</span>
         </span>
-        <DropdownIcon className="w-4 h-4" aria-hidden="true" />
+        <DropdownIcon className={`w-4 h-4 ${isDropdownMenuOpen ? `transform rotate-180` : ``}`} aria-hidden="true" />
       </button>
       <Transition
         show={isDropdownMenuOpen}
