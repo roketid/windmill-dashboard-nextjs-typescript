@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Card, CardBody } from '@windmill/react-ui'
+import { Card, CardBody } from 'windmill-react-ui-kit'
 import PageTitle from 'example/components/Typography/PageTitle'
 import SectionTitle from 'example/components/Typography/SectionTitle'
 import CTA from 'example/components/CTA'

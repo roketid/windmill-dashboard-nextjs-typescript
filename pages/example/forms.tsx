@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Input, HelperText, Label, Select, Textarea } from '@windmill/react-ui'
+import { Input, HelperText, Label, Select, Textarea } from 'windmill-react-ui-kit'
 import CTA from 'example/components/CTA'
 import PageTitle from 'example/components/Typography/PageTitle'
 import SectionTitle from 'example/components/Typography/SectionTitle'

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { DropdownIcon, IIcon } from 'icons'
 import * as Icons from 'icons'
-import { Transition } from '@windmill/react-ui'
+import { Transition } from 'windmill-react-ui-kit'
 import { IRoute, routeIsActive } from 'routes/sidebar'
 import SidebarContext from 'context/SidebarContext'
 

@@ -22,7 +22,7 @@ import {
   Avatar,
   Badge,
   Pagination,
-} from '@windmill/react-ui'
+} from 'windmill-react-ui-kit'
 
 import {
   doughnutOptions,

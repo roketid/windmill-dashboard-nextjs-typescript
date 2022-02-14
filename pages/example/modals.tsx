@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@windmill/react-ui'
+import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'windmill-react-ui-kit'
 import PageTitle from 'example/components/Typography/PageTitle'
 import CTA from 'example/components/CTA'
 import Layout from 'example/containers/Layout'
