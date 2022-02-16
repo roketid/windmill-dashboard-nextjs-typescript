@@ -1173,10 +1173,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@roketid/windmill-react-ui@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@roketid/windmill-react-ui/-/windmill-react-ui-0.1.0.tgz#3e42f6a10935038b5e44d58946cc3484e55e3a63"
-  integrity sha512-RzNzHc7pKv6L0Zn8J3pfJXfcsbhJCQ+Pek88EEGq8kW/KHuA7UgM0cabf7tCleSzM08ef4wnQ/oqTaqSvcFPHQ==
+"@roketid/windmill-react-ui@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@roketid/windmill-react-ui/-/windmill-react-ui-0.1.1.tgz#1bd84cdc2afa15292e342c5b36e74acfd9272833"
+  integrity sha512-fYAd8utdsPBsAMAex7pgnSFLxbBYW/mAI2cD1B47OZV7eboes4vyT1KM71MlXOYNfSAIxW1pYjN1qGPRYfCv8Q==
   dependencies:
     "@tailwindcss/aspect-ratio" "^0.4.0"
     "@tailwindcss/forms" "^0.4.0"
