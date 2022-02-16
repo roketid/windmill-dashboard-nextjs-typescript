@@ -33,7 +33,6 @@ function LoginPage() {
                   className='mt-1'
                   type='email'
                   placeholder='john@doe.com'
-                  css={undefined}
                 />
               </Label>
 
@@ -43,7 +42,6 @@ function LoginPage() {
                   className='mt-1'
                   type='password'
                   placeholder='***************'
-                  css={undefined}
                 />
               </Label>
 

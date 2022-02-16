@@ -29,19 +29,19 @@ function CrateAccount() {
               </h1>
               <Label>
                 <span>Email</span>
-                <Input css="" className="mt-1" type="email" placeholder="john@doe.com" />
+                <Input className="mt-1" type="email" placeholder="john@doe.com" />
               </Label>
               <Label className="mt-4">
                 <span>Password</span>
-                <Input css="" className="mt-1" placeholder="***************" type="password" />
+                <Input className="mt-1" placeholder="***************" type="password" />
               </Label>
               <Label className="mt-4">
                 <span>Confirm password</span>
-                <Input css="" className="mt-1" placeholder="***************" type="password" />
+                <Input className="mt-1" placeholder="***************" type="password" />
               </Label>
 
               <Label className="mt-6" check>
-                <Input css="" type="checkbox" />
+                <Input type="checkbox" />
                 <span className="ml-2">
                   I agree to the <span className="underline">privacy policy</span>
                 </span>

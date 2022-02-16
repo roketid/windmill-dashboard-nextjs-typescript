@@ -45,7 +45,6 @@ function Header() {
               <SearchIcon className="w-4 h-4" aria-hidden="true" />
             </div>
             <Input
-              css=""
               className="pl-8 text-gray-700"
               placeholder="Search for projects"
               aria-label="Search"
