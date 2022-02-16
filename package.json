@@ -9,13 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@roketid/windmill-react-ui": "^0.1.0",
     "chart.js": "^3.6.1",
     "classnames": "^2.3.1",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-chartjs-2": "^4.0.0",
-    "react-dom": "17.0.2",
-    "windmill-react-ui-kit": "^0.7.4"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.1.0",

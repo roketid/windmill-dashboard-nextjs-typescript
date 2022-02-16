@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Label, Input, Button, WindmillContext } from 'windmill-react-ui-kit'
+import { Label, Input, Button, WindmillContext } from '@roketid/windmill-react-ui'
 
 function ForgotPassword() {
   const { mode } = useContext(WindmillContext)

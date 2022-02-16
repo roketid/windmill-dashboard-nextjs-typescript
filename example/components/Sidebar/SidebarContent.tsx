@@ -3,7 +3,7 @@ import routes, { routeIsActive } from 'routes/sidebar'
 import * as Icons from 'icons'
 import { IIcon } from 'icons'
 import SidebarSubmenu from './SidebarSubmenu'
-import { Button } from 'windmill-react-ui-kit'
+import { Button } from '@roketid/windmill-react-ui'
 import { useRouter } from 'next/router'
 
 function Icon({ icon, ...props }: IIcon){

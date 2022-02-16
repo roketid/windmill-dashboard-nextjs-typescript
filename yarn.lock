@@ -1173,6 +1173,22 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@roketid/windmill-react-ui@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@roketid/windmill-react-ui/-/windmill-react-ui-0.1.0.tgz#3e42f6a10935038b5e44d58946cc3484e55e3a63"
+  integrity sha512-RzNzHc7pKv6L0Zn8J3pfJXfcsbhJCQ+Pek88EEGq8kW/KHuA7UgM0cabf7tCleSzM08ef4wnQ/oqTaqSvcFPHQ==
+  dependencies:
+    "@tailwindcss/aspect-ratio" "^0.4.0"
+    "@tailwindcss/forms" "^0.4.0"
+    "@tailwindcss/line-clamp" "^0.3.1"
+    "@tailwindcss/typography" "^0.5.1"
+    autoprefixer "^10.4.2"
+    classnames "2.2.6"
+    deepmerge "4.2.2"
+    postcss "^8.4.6"
+    react-focus-lock "2.4.1"
+    react-transition-group "4.4.1"
+
 "@rushstack/eslint-patch@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.6.tgz#023d72a5c4531b4ce204528971700a78a85a0c50"
@@ -1294,15 +1310,15 @@
   dependencies:
     mini-svg-data-uri "^1.2.3"
 
-"@tailwindcss/line-clamp@^0.3.0":
+"@tailwindcss/line-clamp@^0.3.1":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@tailwindcss/line-clamp/-/line-clamp-0.3.1.tgz#4d8441b509b87ece84e94f28a4aa9998413ab849"
   integrity sha512-pNr0T8LAc3TUx/gxCfQZRe9NB2dPEo/cedPHzUGIPxqDMhgjwNm6jYxww4W5l0zAsAddxr+XfZcqttGiFDgrGg==
 
-"@tailwindcss/typography@^0.5.0":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.1.tgz#486248a9426501f11a9b0295f7cfc0eb29659c46"
-  integrity sha512-AmSzZSgLhHKlILKduU+PKBTHL6c+al82syZlRid1xgmlWwXagLigO+O++B4C0scpMfzW//f/3YCRcwwEHWoU3w==
+"@tailwindcss/typography@^0.5.1":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.2.tgz#24b069dab24d7a2467d01aca0dd432cb4b29f0ee"
+  integrity sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==
   dependencies:
     lodash.castarray "^4.4.0"
     lodash.isplainobject "^4.0.6"
@@ -4317,7 +4333,7 @@ postcss@8.2.15:
     nanoid "^3.1.23"
     source-map "^0.6.1"
 
-postcss@^8.2.15, postcss@^8.4.6:
+postcss@^8.4.6:
   version "8.4.6"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.6.tgz#c5ff3c3c457a23864f32cb45ac9b741498a09ae1"
   integrity sha512-OovjwIzs9Te46vlEx7+uXB0PLijpwjXGKXjVGGPIGubGpq7uh5Xgf6D6FiJ/SzJMBosHDp6a2hiXOS97iBXcaA==
@@ -5380,21 +5396,6 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
-
-windmill-react-ui-kit@^0.7.4:
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/windmill-react-ui-kit/-/windmill-react-ui-kit-0.7.4.tgz#005cdeb15b8908f99f7bb5391a83edf1458e39b7"
-  integrity sha512-zSICZty7faHBHj6GZKuKeekgBgYuBbsoTXQPU112nj7GosRG3I6sWDtgEl2tLv282Fdz8okK4SK0bV8qfaAbXA==
-  dependencies:
-    "@tailwindcss/aspect-ratio" "^0.4.0"
-    "@tailwindcss/forms" "^0.4.0"
-    "@tailwindcss/line-clamp" "^0.3.0"
-    "@tailwindcss/typography" "^0.5.0"
-    classnames "2.2.6"
-    deepmerge "4.2.2"
-    postcss "^8.2.15"
-    react-focus-lock "2.4.1"
-    react-transition-group "4.4.1"
 
 word-wrap@^1.2.3:
   version "1.2.3"
