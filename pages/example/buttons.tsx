@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@windmill/react-ui'
+import { Button } from '@roketid/windmill-react-ui'
 import PageTitle from 'example/components/Typography/PageTitle'
 import SectionTitle from 'example/components/Typography/SectionTitle'
 import CTA from 'example/components/CTA'

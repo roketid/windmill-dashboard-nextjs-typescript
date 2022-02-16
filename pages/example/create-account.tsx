@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { GithubIcon, TwitterIcon } from 'icons'
-import { Input, Label, Button, WindmillContext } from '@windmill/react-ui'
+import { Input, Label, Button, WindmillContext } from '@roketid/windmill-react-ui'
 
 function CrateAccount() {
   const { mode } = useContext(WindmillContext)

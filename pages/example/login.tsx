@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Label, Input, Button, WindmillContext } from '@windmill/react-ui'
+import { Label, Input, Button, WindmillContext } from '@roketid/windmill-react-ui'
 import { GithubIcon, TwitterIcon } from 'icons'
 
 function LoginPage() {
