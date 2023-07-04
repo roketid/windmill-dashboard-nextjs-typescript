@@ -48,7 +48,7 @@ function CrateAccount() {
               </Label>
 
               <Link
-                  href='/example/login'
+                  href='/radius/login'
                   passHref={true}
                 >
                 <Button block className="mt-4">
@@ -68,7 +68,7 @@ function CrateAccount() {
               </Button>
 
               <p className="mt-4">
-                <Link href="/example/login">
+                <Link href="/radius/login">
                   <a
                     className="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
                   >

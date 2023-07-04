@@ -26,6 +26,8 @@ import DropdownIcon from './dropdown.svg'
 import OutlinePersonIcon from './outlinePerson.svg'
 import OutlineCogIcon from './outlineCog.svg'
 import OutlineLogoutIcon from './outlineLogout.svg'
+import SSOIcon from './sso.svg'
+import SSOIcon100 from './sso100.svg'
 
 export {
   ButtonsIcon,
@@ -56,6 +58,8 @@ export {
   OutlinePersonIcon,
   OutlineCogIcon,
   OutlineLogoutIcon,
+  SSOIcon100,
+  SSOIcon,
 }
 
 interface IIcon{

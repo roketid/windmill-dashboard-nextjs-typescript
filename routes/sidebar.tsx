@@ -19,71 +19,51 @@ export function routeIsActive (pathname: String, route: IRoute): boolean {
   }
 
   return route?.exact
-    ? pathname == route?.path
-    : (route?.path ? pathname.indexOf(route.path) === 0 : false)
+      ? pathname == route?.path
+      : (route?.path ? pathname.indexOf(route.path) === 0 : false)
 }
 
 const routes: IRoute[] = [
   {
-    path: '/example', // the url
+    path: '/radius', // the url
     icon: 'HomeIcon', // the component being exported from icons/index.js
-    name: 'Dashboard', // name that appear in Sidebar
+    name: 'Início', // name that appear in Sidebar
     exact: true,
   },
   {
-    path: '/example/forms',
-    icon: 'FormsIcon',
-    name: 'Forms',
-  },
-  {
-    path: '/example/cards',
-    icon: 'CardsIcon',
-    name: 'Cards',
-  },
-  {
-    path: '/example/charts',
+    path: '/radius/dashboards',
     icon: 'ChartsIcon',
-    name: 'Charts',
+    name: 'Dashboards',
   },
   {
-    path: '/example/buttons',
-    icon: 'ButtonsIcon',
-    name: 'Buttons',
-  },
-  {
-    path: '/example/modals',
-    icon: 'ModalsIcon',
-    name: 'Modals',
-  },
-  {
-    path: '/example/tables',
+    path: '/radius/radacct',
     icon: 'TablesIcon',
-    name: 'Tables',
+    name: 'Radacct',
   },
   {
     icon: 'PagesIcon',
-    name: 'Pages',
+    name: 'Menus',
     routes: [
       // submenu
       {
-        path: '/example/login',
-        name: 'Login',
+        path: '/radius/users',
+        name: 'Usuários',
       },
       {
-        path: '/example/create-account',
-        name: 'Create account',
+        path: '/radius/create-account',
+        name: 'Criar conta',
       },
       {
-        path: '/example/forgot-password',
-        name: 'Forgot password',
+        path: '/radius/support',
+        name: 'Chamar suporte',
       },
       {
-        path: '/example/404',
-        name: '404',
+        path: '/radius/actions-freeradius',
+        name: 'Ações FreeRADIUS',
       },
       {
-        path: '/example/blank',
-        name: 'Blank',
+        path: '/radius/sync',
+        name: 'Sincronizar dados',
       },
     ],
   },

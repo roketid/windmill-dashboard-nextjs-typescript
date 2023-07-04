@@ -70,9 +70,9 @@ function SidebarContent({ linkClicked }: ISidebarContent) {
       </ul>
       <div className="px-6 my-6">
         <Button>
-          Create account
+          RADIUS
           <span className="ml-2" aria-hidden="true">
-            +
+            Test
           </span>
         </Button>
       </div>

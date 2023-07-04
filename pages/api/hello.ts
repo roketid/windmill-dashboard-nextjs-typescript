@@ -6,8 +6,8 @@ type Data = {
 }
 
 export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
+    req: NextApiRequest,
+    res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json({ name: 'API em Desenvolvimento' })
 }

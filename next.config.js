@@ -14,7 +14,7 @@ module.exports = {
     return [
       {
         source: '/',
-        destination: '/example/login',
+        destination: '/radius/login',
         permanent: false,
       },
     ]

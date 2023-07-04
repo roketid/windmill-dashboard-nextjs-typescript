@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Label, Input, Button, WindmillContext } from '@roketid/windmill-react-ui'
-import { GithubIcon, TwitterIcon } from 'icons'
+import {GithubIcon, TwitterIcon, SSOIcon, SSOIcon100} from 'icons'
 
 function LoginPage() {
   const { mode } = useContext(WindmillContext)
@@ -25,19 +25,19 @@ function LoginPage() {
           <main className='flex items-center justify-center p-6 sm:p-12 md:w-1/2'>
             <div className='w-full'>
               <h1 className='mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200'>
-                Login
+                Entrar
               </h1>
               <Label>
-                <span>Email</span>
+                <span>E-mail</span>
                 <Input
                   className='mt-1'
                   type='email'
-                  placeholder='john@doe.com'
+                  placeholder='teste@teste.com'
                 />
               </Label>
 
               <Label className='mt-4'>
-                <span>Password</span>
+                <span>Senha</span>
                 <Input
                   className='mt-1'
                   type='password'
@@ -45,34 +45,23 @@ function LoginPage() {
                 />
               </Label>
 
-              <Link href='/example' passHref={true}>
+              <Link href='/radius' passHref={true}>
                 <Button className='mt-4' block>
-                  Log in
+                  Entrar
                 </Button>
               </Link>
 
               <hr className='my-8' />
 
               <Button block layout='outline'>
-                <GithubIcon className='w-4 h-4 mr-2' aria-hidden='true' />
-                Github
-              </Button>
-              <Button className='mt-4' block layout='outline'>
-                <TwitterIcon className='w-4 h-4 mr-2' aria-hidden='true' />
-                Twitter
+                <SSOIcon100 className='w-4 h-4 mr-2' aria-hidden='true' />
+                SSO
               </Button>
 
               <p className='mt-4'>
-                <Link href='/example/forgot-password'>
+                <Link href='/radius/forgot-password'>
                   <a className='text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline'>
-                    Forgot your password?
-                  </a>
-                </Link>
-              </p>
-              <p className='mt-1'>
-                <Link href='/example/create-account'>
-                  <a className='text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline'>
-                    Create account
+                    Esqueceu a senha?
                   </a>
                 </Link>
               </p>

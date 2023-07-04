@@ -1,5 +1,5 @@
-import PageTitle from 'example/components/Typography/PageTitle'
-import Layout from 'example/containers/Layout'
+import PageTitle from 'src/components/Typography/PageTitle'
+import Layout from 'src/containers/Layout'
 
 function Blank() {
   return (
