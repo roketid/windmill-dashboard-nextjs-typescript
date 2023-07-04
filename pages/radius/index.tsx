@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Doughnut, Line } from 'react-chartjs-2'
 
-import CTA from 'example/components/CTA'
-import InfoCard from 'example/components/Cards/InfoCard'
-import ChartCard from 'example/components/Chart/ChartCard'
-import ChartLegend from 'example/components/Chart/ChartLegend'
-import PageTitle from 'example/components/Typography/PageTitle'
-import RoundIcon from 'example/components/RoundIcon'
-import Layout from 'example/containers/Layout'
+import CTA from 'src/components/CTA'
+import InfoCard from 'src/components/Cards/InfoCard'
+import ChartCard from 'src/components/Chart/ChartCard'
+import ChartLegend from 'src/components/Chart/ChartLegend'
+import PageTitle from 'src/components/Typography/PageTitle'
+import RoundIcon from 'src/components/RoundIcon'
+import Layout from 'src/containers/Layout'
 import response, { ITableData } from 'utils/demo/tableData'
 import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from 'icons'
 
@@ -75,13 +75,13 @@ function Dashboard() {
 
   return (
     <Layout>
-      <PageTitle>Dashboard</PageTitle>
+      <PageTitle>Início</PageTitle>
 
       <CTA />
 
       {/* <!-- Cards --> */}
       <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-        <InfoCard title="Total clients" value="6389">
+        <InfoCard title="Clientes autenticados" value="1">
           {/* @ts-ignore */}
           <RoundIcon
             icon={PeopleIcon}
@@ -91,7 +91,7 @@ function Dashboard() {
           />
         </InfoCard>
 
-        <InfoCard title="Account balance" value="$ 46,760.89">
+        <InfoCard title="Logs coletados" value="0">
           {/* @ts-ignore */}
           <RoundIcon
             icon={MoneyIcon}
@@ -101,7 +101,7 @@ function Dashboard() {
           />
         </InfoCard>
 
-        <InfoCard title="New sales" value="376">
+        <InfoCard title="Quantidade de requisições" value="376">
           {/* @ts-ignore */}
           <RoundIcon
             icon={CartIcon}
@@ -111,7 +111,7 @@ function Dashboard() {
           />
         </InfoCard>
 
-        <InfoCard title="Pending contacts" value="35">
+        <InfoCard title="Autenticações com falha" value="35">
           {/* @ts-ignore */}
           <RoundIcon
             icon={ChatIcon}
@@ -126,10 +126,10 @@ function Dashboard() {
         <Table>
           <TableHeader>
             <tr>
-              <TableCell>Client</TableCell>
-              <TableCell>Amount</TableCell>
+              <TableCell>Logins</TableCell>
+              <TableCell>IP</TableCell>
               <TableCell>Status</TableCell>
-              <TableCell>Date</TableCell>
+              <TableCell>Tempo conectado</TableCell>
             </tr>
           </TableHeader>
           <TableBody>
@@ -137,21 +137,15 @@ function Dashboard() {
               <TableRow key={i}>
                 <TableCell>
                   <div className="flex items-center text-sm">
-                    <Avatar
-                      className="hidden mr-3 md:block"
-                      src={user.avatar}
-                      alt="User image"
-                    />
                     <div>
                       <p className="font-semibold">{user.name}</p>
                       <p className="text-xs text-gray-600 dark:text-gray-400">
-                        {user.job}
                       </p>
                     </div>
                   </div>
                 </TableCell>
                 <TableCell>
-                  <span className="text-sm">$ {user.amount}</span>
+                  <span className="text-sm">{user.ip}</span>
                 </TableCell>
                 <TableCell>
                   <Badge type={user.status}>{user.status}</Badge>
@@ -175,14 +169,14 @@ function Dashboard() {
         </TableFooter>
       </TableContainer>
 
-      <PageTitle>Charts</PageTitle>
+      <PageTitle>Dashboard Sessões</PageTitle>
       <div className="grid gap-6 mb-8 md:grid-cols-2">
-        <ChartCard title="Revenue">
+        <ChartCard title="Sessões">
           <Doughnut {...doughnutOptions} />
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
-        <ChartCard title="Traffic">
+        <ChartCard title="Quantidade de autenticações">
           <Line {...lineOptions} />
           <ChartLegend legends={lineLegends} />
         </ChartCard>
